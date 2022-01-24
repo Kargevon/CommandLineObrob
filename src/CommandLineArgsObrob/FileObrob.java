@@ -60,7 +60,7 @@ public class FileObrob implements ArgsList {
 	public void findAllArgs() throws Exception {
 		readFile();
 		
-		if(pairsList.isEmpty()) {
+		if(lines.length<1) {
 			throw new Exception("args list is empty");
 		}
 		
