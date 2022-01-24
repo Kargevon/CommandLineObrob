@@ -58,6 +58,7 @@ public class FileObrob implements ArgsList {
 	}
 
 	public void findAllArgs() throws Exception {
+		//here some error. Need fix with empty line and something anothers
 		readFile();
 		
 		if(lines.length<1) {
