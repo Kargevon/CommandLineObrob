@@ -1,8 +1,6 @@
 package CommandLineArgsObrob;
-import java.util.ArrayList;
-import java.util.Iterator;
 
- interface ArgsList {
+public interface ArgsList {
 
 	 
 	

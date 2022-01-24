@@ -59,6 +59,11 @@ public class FileObrob implements ArgsList {
 
 	public void findAllArgs() throws Exception {
 		readFile();
+		
+		if(pairsList.isEmpty()) {
+			throw new Exception("args list is empty");
+		}
+		
 		String[] pair = new String[2];
 		
 		for(int i=0; i!=lines.length; ++i) {

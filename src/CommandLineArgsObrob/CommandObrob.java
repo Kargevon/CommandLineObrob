@@ -46,7 +46,10 @@ public class CommandObrob implements ArgsList{
 		return "";
 	}
 
-	public void findAllArgs() {
+	public void findAllArgs() throws Exception {
+		if(pairsList.isEmpty()) {
+			throw new Exception("args list is empty");
+		}
 		Iterator<String> iter;
 		String currentKey = "";
 		for (int i = 0; i != args.length - 1; ++i) {
