@@ -3,11 +3,11 @@ import java.util.Iterator;
 
 public class ArgsList {
 
-	ArrayList<ArgPair> pairsList;
+	private ArrayList<ArgPair> pairsList = new ArrayList<ArgPair>();
 
-	ArrayList<String> keys;
+	private ArrayList<String> keys = new ArrayList<String>();
 
-	String args[];
+	private String args[];
 
 	public ArgsList(String args[]) {
 		this.args = args;
@@ -54,7 +54,7 @@ public class ArgsList {
 
 				currentKey = iter.next();
 				if (currentKey.equals(args[i])) {
-					pairsList.add(new ArgPair(currentKey, args[i]));
+					pairsList.add(new ArgPair(currentKey, args[i+1]));
 
 				}
 			}
