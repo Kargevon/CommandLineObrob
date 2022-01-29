@@ -68,6 +68,7 @@ public class FileObrob implements ArgsList {
 		String[] pair = new String[2];
 		
 		for(int i=0; i!=lines.length; ++i) {
+			if(!lines[i].contains(separator))continue;
 			pair=lines[i].split(separator, 2);
 			pairsList.add(new ArgPair(pair[0], pair[1]));
 		}
@@ -81,11 +82,17 @@ public class FileObrob implements ArgsList {
 		}
 		FileReader fr = new FileReader(f);
 		BufferedReader br = new BufferedReader(fr);
+		
 		ArrayList<String> strs = new ArrayList<String>();
 		while(br.ready()) {
 			strs.add(br.readLine());
 		}
+		br.close();
+		fr.close();
+		
+		lines = new String[strs.size()];
 		lines = strs.toArray(lines);
+		
 		
 		
 		
